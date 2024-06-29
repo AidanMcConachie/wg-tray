@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+63ff3eceaa644a081a02e56a105cea0b CMakeFiles/wg-tray_autogen
+254319ce222ef6cf3fd4530944c74b0a wg-tray_autogen/timestamp

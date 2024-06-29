@@ -1,0 +1,9 @@
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/wg-tray.dir
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/install.dir
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/wg-tray_autogen_timestamp_deps.dir
+/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles/wg-tray_autogen.dir
