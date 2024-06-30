@@ -351,7 +351,11 @@ CMakeFiles/wg-tray.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/istream.tcc \
  /usr/include/c++/14.1.1/bits/sstream.tcc /usr/include/c++/14.1.1/codecvt \
  /usr/include/c++/14.1.1/bits/fs_dir.h \
- /usr/include/c++/14.1.1/bits/fs_ops.h \
+ /usr/include/c++/14.1.1/bits/fs_ops.h /usr/include/qt6/QtCore/QString \
+ /usr/include/qt6/QtCore/qstring.h \
+ /usr/include/qt6/QtWidgets/QSystemTrayIcon \
+ /usr/include/qt6/QtWidgets/qsystemtrayicon.h \
+ /usr/include/qt6/QtGui/QIcon /usr/include/qt6/QtGui/qicon.h \
  /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtCore/qcoreapplication.h \
@@ -366,4 +370,5 @@ CMakeFiles/wg-tray.dir/main.cpp.o: \
  /usr/include/qt6/QtGui/qguiapplication_platform.h \
  /usr/include/qt6/QtWidgets/QRadioButton \
  /usr/include/qt6/QtWidgets/qradiobutton.h \
- /usr/include/qt6/QtWidgets/qabstractbutton.h
+ /usr/include/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/c++/14.1.1/iostream
