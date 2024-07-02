@@ -13,7 +13,7 @@
 #include <iostream>
 
 
-QString previousUsedConfig = "";
+QString previousUsedConfig = ""; // has to be global so other functions (of classes) can access it
 
 wireguard_tray::wireguard_tray(QWidget *parent)
     : QMainWindow(parent)
@@ -25,6 +25,7 @@ wireguard_tray::wireguard_tray(QWidget *parent)
     createFiles(); // create required .config directories (if needed)
 
 
+    // Defining tray icon properties
     std::filesystem::path filesystemPath = std::filesystem::current_path().parent_path().parent_path() / "assets" / "icon"; // do double parent paths to get back to wg-tray/...
     QString path = QString::fromStdString(filesystemPath.string());
     QIcon trayIcon;
@@ -33,12 +34,12 @@ wireguard_tray::wireguard_tray(QWidget *parent)
     tray->show();
     tray->showMessage("Wireguard Tray", "Double click to change");
 
-
+    // Menu & actions after right clicking on tray, future verions of wg-tray will solely use this, for simplicity
     QMenu *menu = new QMenu;
     QAction *exit = menu->addAction("Exit");
     tray->setContextMenu(menu);
-    connect(tray, &QSystemTrayIcon::activated, this, &wireguard_tray::onTrayClick);
-    connect(exit, &QAction::triggered, this, &QCoreApplication::quit);
+    connect(tray, &QSystemTrayIcon::activated, this, &wireguard_tray::onTrayClick); // open/close when clicking tray icon
+    connect(exit, &QAction::triggered, this, &QCoreApplication::quit); // exit application
 
     // TODO: Lots of boilerplate code, shorten
 
@@ -67,6 +68,8 @@ wireguard_tray::wireguard_tray(QWidget *parent)
     connect(ui->config2Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 1));
     connect(ui->config3Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 2));
     connect(ui->config4Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 3));
+
+    delete menu; delete exit;
 }
 
 wireguard_tray::~wireguard_tray()
@@ -81,7 +84,7 @@ void wireguard_tray::on_configButton_pressed(int index)
 {
     QString name = fetchConfigName(index);
     startwg(name, previousUsedConfig);
-    previousUsedConfig = name;
+    previousUsedConfig = name; // set current config to previous config the next time it is ran
 }
 
 

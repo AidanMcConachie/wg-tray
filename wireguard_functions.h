@@ -8,6 +8,8 @@
 #include <iostream>
 
 
+// future versions *should* use polkit or a variation of it, but terminal cmds will work also.
+
 
 void startwg(QString configName, QString lastConfigName=""){
     QProcess* terminal = new QProcess();
