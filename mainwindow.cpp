@@ -13,7 +13,7 @@
 #include <iostream>
 
 
-
+QString previousUsedConfig = "";
 
 wireguard_tray::wireguard_tray(QWidget *parent)
     : QMainWindow(parent)
@@ -24,23 +24,49 @@ wireguard_tray::wireguard_tray(QWidget *parent)
 
     createFiles(); // create required .config directories (if needed)
 
+
     std::filesystem::path filesystemPath = std::filesystem::current_path().parent_path().parent_path() / "assets" / "icon"; // do double parent paths to get back to wg-tray/...
     QString path = QString::fromStdString(filesystemPath.string());
     QIcon trayIcon;
     trayIcon.addFile(path);
     tray->setIcon(trayIcon);
     tray->show();
-    tray->showMessage("Wireguard Tray", "Right click to change");
-    connect(tray, &QSystemTrayIcon::activated, this, &wireguard_tray::onTrayClick);
+    tray->showMessage("Wireguard Tray", "Double click to change");
 
-    // set button names
+
+    QMenu *menu = new QMenu;
+    QAction *exit = menu->addAction("Exit");
+    tray->setContextMenu(menu);
+    connect(tray, &QSystemTrayIcon::activated, this, &wireguard_tray::onTrayClick);
+    connect(exit, &QAction::triggered, this, &QCoreApplication::quit);
+
+    // TODO: Lots of boilerplate code, shorten
+
     ui->config1Button->setText(fetchConfigName(0));
     ui->config2Button->setText(fetchConfigName(1));
     ui->config3Button->setText(fetchConfigName(2));
     ui->config4Button->setText(fetchConfigName(3));
 
 
-    connect(ui->config1Button, &QRadioButton::clicked, this, &wireguard_tray::on_config1Button_pressed);
+    if (ui->config1Button->text()==""){
+        ui->config1Button->setVisible(false);
+    }
+    if (ui->config2Button->text()==""){
+        ui->config2Button->setVisible(false);
+    }
+    if (ui->config3Button->text()==""){
+        ui->config3Button->setVisible(false);
+    }
+    if (ui->config4Button->text()==""){
+        ui->config4Button->setVisible(false);
+    }
+
+    std::cout << ui->config4Button->text().toStdString() << std::endl;
+    // std::bind is used below to add index (less code needed)
+    connect(ui->config1Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 0));
+    connect(ui->config2Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 1));
+    connect(ui->config3Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 2));
+    connect(ui->config4Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 3));
 }
 
 wireguard_tray::~wireguard_tray()
@@ -49,18 +75,13 @@ wireguard_tray::~wireguard_tray()
 }
 
 
-// void wireguard_tray::on_config1Button_clicked()
-// {
-//     QString name = fetchConfigName(0);
-//     startwg(name);
-// }
 
 
-
-
-void wireguard_tray::on_config1Button_pressed()
+void wireguard_tray::on_configButton_pressed(int index)
 {
-    QString name = fetchConfigName(0);
-    startwg(name);
+    QString name = fetchConfigName(index);
+    startwg(name, previousUsedConfig);
+    previousUsedConfig = name;
 }
+
 

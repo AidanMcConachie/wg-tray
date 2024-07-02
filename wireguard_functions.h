@@ -11,18 +11,18 @@
 
 void startwg(QString configName, QString lastConfigName=""){
     QProcess* terminal = new QProcess();
-    if (lastConfigName==""){ // might be able to use nullptr here?
-        QStringList command = {"sudo", "wg-quick", "down", lastConfigName, "&&", "sudo", "wg-quick", "up", configName, "&&", "exit"}; // stop and start
+    if (!(lastConfigName=="")){ // might be able to use nullptr here?
+        QStringList command = {"sudo", "wg-quick", "down", lastConfigName, "&&", "sudo", "wg-quick", "up", configName}; // stop and start
         terminal->start("foot", command);
     } else {
-        QStringList command = {"sudo", "wg-quick", "up", configName, "&&", "exit"}; // just start
+        QStringList command = {"sudo", "wg-quick", "up", configName}; // just start
         terminal->start("foot", command);
     }
 }
 
 void stopwg(QString configName){
     QProcess* terminal = new QProcess();
-    QStringList command = {"sudo", "wg-quick", "down", configName, "&&", "quit"};
+    QStringList command = {"sudo", "wg-quick", "down", configName};
     terminal->start("foot", command);
 }
 

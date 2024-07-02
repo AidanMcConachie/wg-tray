@@ -29,7 +29,7 @@ public:
         }
     }
 private slots:
-    void on_config1Button_pressed();
+    void on_configButton_pressed(int index);
 
 private:
     Ui::wireguard_tray *ui;
