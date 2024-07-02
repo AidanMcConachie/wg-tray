@@ -104,32 +104,32 @@ CMakeFiles/wg-tray.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/wg-tray.dir/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aidan/githubProjects/wg-tray/wg-tray/main.cpp -o CMakeFiles/wg-tray.dir/main.cpp.s
 
-CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o: CMakeFiles/wg-tray.dir/flags.make
-CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o: /home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.cpp
-CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o: CMakeFiles/wg-tray.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o -MF CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o.d -o CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o -c /home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.cpp
+CMakeFiles/wg-tray.dir/mainwindow.cpp.o: CMakeFiles/wg-tray.dir/flags.make
+CMakeFiles/wg-tray.dir/mainwindow.cpp.o: /home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.cpp
+CMakeFiles/wg-tray.dir/mainwindow.cpp.o: CMakeFiles/wg-tray.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/wg-tray.dir/mainwindow.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/wg-tray.dir/mainwindow.cpp.o -MF CMakeFiles/wg-tray.dir/mainwindow.cpp.o.d -o CMakeFiles/wg-tray.dir/mainwindow.cpp.o -c /home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.cpp
 
-CMakeFiles/wg-tray.dir/wireguard_tray.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/wg-tray.dir/wireguard_tray.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.cpp > CMakeFiles/wg-tray.dir/wireguard_tray.cpp.i
+CMakeFiles/wg-tray.dir/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/wg-tray.dir/mainwindow.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.cpp > CMakeFiles/wg-tray.dir/mainwindow.cpp.i
 
-CMakeFiles/wg-tray.dir/wireguard_tray.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/wg-tray.dir/wireguard_tray.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.cpp -o CMakeFiles/wg-tray.dir/wireguard_tray.cpp.s
+CMakeFiles/wg-tray.dir/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/wg-tray.dir/mainwindow.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.cpp -o CMakeFiles/wg-tray.dir/mainwindow.cpp.s
 
 # Object files for target wg-tray
 wg__tray_OBJECTS = \
 "CMakeFiles/wg-tray.dir/wg-tray_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/wg-tray.dir/main.cpp.o" \
-"CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o"
+"CMakeFiles/wg-tray.dir/mainwindow.cpp.o"
 
 # External object files for target wg-tray
 wg__tray_EXTERNAL_OBJECTS =
 
 wg-tray: CMakeFiles/wg-tray.dir/wg-tray_autogen/mocs_compilation.cpp.o
 wg-tray: CMakeFiles/wg-tray.dir/main.cpp.o
-wg-tray: CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o
+wg-tray: CMakeFiles/wg-tray.dir/mainwindow.cpp.o
 wg-tray: CMakeFiles/wg-tray.dir/build.make
 wg-tray: /usr/lib/libQt6Widgets.so.6.7.2
 wg-tray: /usr/lib/libQt6Gui.so.6.7.2

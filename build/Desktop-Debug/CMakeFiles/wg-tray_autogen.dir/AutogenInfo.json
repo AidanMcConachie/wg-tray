@@ -375,9 +375,15 @@
 			null
 		],
 		[
-			"/home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.h",
+			"/home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_wireguard_tray.cpp",
+			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/aidan/githubProjects/wg-tray/wg-tray/wireguard_functions.h",
+			"MU",
+			"EWIEGA46WW/moc_wireguard_functions.cpp",
 			null
 		]
 	],
@@ -442,7 +448,7 @@
 	[
 		[ "/home/aidan/githubProjects/wg-tray/wg-tray/main.cpp", "MU", null ],
 		[
-			"/home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.cpp",
+			"/home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.cpp",
 			"MU",
 			null
 		]

@@ -1,8 +1,8 @@
 CMakeFiles/wg-tray.dir/wg-tray_autogen/mocs_compilation.cpp.o: \
  /home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/wg-tray_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/wg-tray_autogen/EWIEGA46WW/moc_wireguard_tray.cpp \
- /home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/wg-tray_autogen/EWIEGA46WW/../../../../wireguard_tray.h \
+ /home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/wg-tray_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+ /home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/wg-tray_autogen/EWIEGA46WW/../../../../mainwindow.h \
  /usr/include/qt6/QtWidgets/QMainWindow \
  /usr/include/qt6/QtWidgets/qmainwindow.h \
  /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -328,4 +328,6 @@ CMakeFiles/wg-tray.dir/wg-tray_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/qt6/QtGui/qcursor.h /usr/include/qt6/QtGui/qbitmap.h \
  /usr/include/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/qt6/QtWidgets/QSystemTrayIcon \
+ /usr/include/qt6/QtWidgets/qsystemtrayicon.h \
  /usr/include/qt6/QtCore/qtmochelpers.h

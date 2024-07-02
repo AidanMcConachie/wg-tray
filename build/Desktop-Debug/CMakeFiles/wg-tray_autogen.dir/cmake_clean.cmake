@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wg-tray_autogen"
-  "wg-tray_autogen/include/ui_wireguard_tray.h"
+  "wg-tray_autogen/include/ui_mainwindow.h"
   "wg-tray_autogen/mocs_compilation.cpp"
   "wg-tray_autogen/timestamp"
 )

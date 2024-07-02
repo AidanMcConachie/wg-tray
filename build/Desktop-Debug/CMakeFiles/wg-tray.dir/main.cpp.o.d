@@ -1,7 +1,7 @@
 CMakeFiles/wg-tray.dir/main.cpp.o: \
  /home/aidan/githubProjects/wg-tray/wg-tray/main.cpp \
  /usr/include/stdc-predef.h \
- /home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.h \
+ /home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.h \
  /usr/include/qt6/QtWidgets/QMainWindow \
  /usr/include/qt6/QtWidgets/qmainwindow.h \
  /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -327,6 +327,8 @@ CMakeFiles/wg-tray.dir/main.cpp.o: \
  /usr/include/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/qt6/QtGui/qcursor.h /usr/include/qt6/QtGui/qbitmap.h \
  /usr/include/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/qt6/QtWidgets/QSystemTrayIcon \
+ /usr/include/qt6/QtWidgets/qsystemtrayicon.h \
  /home/aidan/githubProjects/wg-tray/wg-tray/file_functions.h \
  /usr/include/c++/14.1.1/filesystem /usr/include/c++/14.1.1/bits/fs_fwd.h \
  /usr/include/c++/14.1.1/bits/fs_path.h /usr/include/c++/14.1.1/locale \
@@ -352,11 +354,8 @@ CMakeFiles/wg-tray.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/sstream.tcc /usr/include/c++/14.1.1/codecvt \
  /usr/include/c++/14.1.1/bits/fs_dir.h \
  /usr/include/c++/14.1.1/bits/fs_ops.h /usr/include/qt6/QtCore/QString \
- /usr/include/qt6/QtCore/qstring.h \
- /usr/include/qt6/QtWidgets/QSystemTrayIcon \
- /usr/include/qt6/QtWidgets/qsystemtrayicon.h \
- /usr/include/qt6/QtGui/QIcon /usr/include/qt6/QtGui/qicon.h \
- /usr/include/qt6/QtWidgets/QApplication \
+ /usr/include/qt6/QtCore/qstring.h /usr/include/qt6/QtGui/QIcon \
+ /usr/include/qt6/QtGui/qicon.h /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtCore/qcoreapplication.h \
  /usr/include/qt6/QtCore/qcoreevent.h \
@@ -371,4 +370,5 @@ CMakeFiles/wg-tray.dir/main.cpp.o: \
  /usr/include/qt6/QtWidgets/QRadioButton \
  /usr/include/qt6/QtWidgets/qradiobutton.h \
  /usr/include/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/qobject.h \
  /usr/include/c++/14.1.1/iostream

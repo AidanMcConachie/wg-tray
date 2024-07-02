@@ -6,8 +6,9 @@ wg-tray_autogen/timestamp: \
 	/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/wg-tray_autogen/moc_predefs.h \
 	/home/aidan/githubProjects/wg-tray/wg-tray/file_functions.h \
 	/home/aidan/githubProjects/wg-tray/wg-tray/main.cpp \
-	/home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.cpp \
-	/home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.h \
+	/home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.cpp \
+	/home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.h \
+	/home/aidan/githubProjects/wg-tray/wg-tray/wireguard_functions.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
@@ -395,8 +396,10 @@ wg-tray_autogen/timestamp: \
 	/usr/include/qt6/QtGui/qtransform.h \
 	/usr/include/qt6/QtGui/qwindowdefs.h \
 	/usr/include/qt6/QtWidgets/QMainWindow \
+	/usr/include/qt6/QtWidgets/QSystemTrayIcon \
 	/usr/include/qt6/QtWidgets/qmainwindow.h \
 	/usr/include/qt6/QtWidgets/qsizepolicy.h \
+	/usr/include/qt6/QtWidgets/qsystemtrayicon.h \
 	/usr/include/qt6/QtWidgets/qtabwidget.h \
 	/usr/include/qt6/QtWidgets/qtwidgets-config.h \
 	/usr/include/qt6/QtWidgets/qtwidgetsexports.h \
@@ -670,5 +673,5 @@ wg-tray_autogen/timestamp: \
 	/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake \
 	/usr/share/cmake/Modules/Platform/Linux.cmake \
 	/usr/share/cmake/Modules/Platform/UnixPaths.cmake \
-	/home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.ui \
+	/home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.ui \
 	/usr/bin/cmake

@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-1dbf4b8d76935cc18e67.json",
+					"jsonFile" : "directory-.-Debug-74e6f66fd984a7d2bcce.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "wg-tray::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-wg-tray-Debug-e7501a1cab9a638316bb.json",
+					"jsonFile" : "target-wg-tray-Debug-7e3c85d397aad1f0ce34.json",
 					"name" : "wg-tray",
 					"projectIndex" : 0
 				},

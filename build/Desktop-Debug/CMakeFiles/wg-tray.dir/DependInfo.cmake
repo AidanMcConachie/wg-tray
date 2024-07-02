@@ -10,8 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "wg-tray_autogen/timestamp" "custom" "wg-tray_autogen/deps"
   "/home/aidan/githubProjects/wg-tray/wg-tray/main.cpp" "CMakeFiles/wg-tray.dir/main.cpp.o" "gcc" "CMakeFiles/wg-tray.dir/main.cpp.o.d"
+  "/home/aidan/githubProjects/wg-tray/wg-tray/mainwindow.cpp" "CMakeFiles/wg-tray.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/wg-tray.dir/mainwindow.cpp.o.d"
   "/home/aidan/githubProjects/wg-tray/wg-tray/build/Desktop-Debug/wg-tray_autogen/mocs_compilation.cpp" "CMakeFiles/wg-tray.dir/wg-tray_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/wg-tray.dir/wg-tray_autogen/mocs_compilation.cpp.o.d"
-  "/home/aidan/githubProjects/wg-tray/wg-tray/wireguard_tray.cpp" "CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o" "gcc" "CMakeFiles/wg-tray.dir/wireguard_tray.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
