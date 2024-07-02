@@ -28,6 +28,9 @@ public:
             wireguard_tray::show();
         }
     }
+private slots:
+    void on_config1Button_pressed();
+
 private:
     Ui::wireguard_tray *ui;
     QSystemTrayIcon *tray;
