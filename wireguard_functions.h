@@ -1,14 +1,10 @@
 #ifndef WIREGUARD_FUNCTIONS_H
 #define WIREGUARD_FUNCTIONS_H
 
-#include <stdlib.h>
 #include <QProcess>
 #include <QString>
-#include <string.h>
-#include <iostream>
 
-
-// future versions *should* use polkit or a variation of it, but terminal cmds will work also.
+// future versions *should* use polkit or a variation of it, but terminal commands will work also.
 
 
 void startwg(QString configName, QString lastConfigName=""){

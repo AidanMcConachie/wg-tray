@@ -340,7 +340,4 @@ CMakeFiles/wg-tray.dir/main.cpp.o: \
  /usr/include/qt6/QtCore/qcoreapplication_platform.h \
  /usr/include/qt6/QtGui/qguiapplication.h \
  /usr/include/qt6/QtGui/qinputmethod.h /usr/include/qt6/QtCore/qlocale.h \
- /usr/include/qt6/QtGui/qguiapplication_platform.h \
- /usr/include/qt6/QtWidgets/QWidget /usr/include/qt6/QtWidgets/qwidget.h \
- /usr/include/qt6/QtWidgets/QMenu /usr/include/qt6/QtWidgets/qmenu.h \
- /usr/include/qt6/QtGui/QAction /usr/include/qt6/QtGui/qaction.h
+ /usr/include/qt6/QtGui/qguiapplication_platform.h

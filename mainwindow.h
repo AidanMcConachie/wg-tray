@@ -1,7 +1,6 @@
 #ifndef WIREGUARD_TRAY_H
 #define WIREGUARD_TRAY_H
 
-
 #include <QMainWindow>
 #include <QSystemTrayIcon>
 

@@ -1,20 +1,16 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-
 #include "wireguard_functions.h"
 #include "file_functions.h"
-
 
 #include <QString>
 #include <QIcon>
 #include <QRadioButton>
 #include <filesystem>
 
-#include <iostream>
 
 
-
-QString previousUsedConfig = ""; // has to be global so all methods can access it
+QString previousUsedConfig = ""; // has to be global so all functions & methods can access it
 
 wireguard_tray::wireguard_tray(QWidget *parent)
     : QMainWindow(parent)
@@ -39,8 +35,6 @@ wireguard_tray::wireguard_tray(QWidget *parent)
     QMenu *menu = new QMenu;
     QAction *exit = menu->addAction("Exit");
     tray->setContextMenu(menu);
-    // connect(exit, &QAction::triggered, this, std::bind(&wireguard_tray::onTrayExit, this, previousUsedConfig));; // stop wireguard
-    // connect(exit, &QAction::triggered, this, &QCoreApplication::quit); // exit application
 
     // TODO: Lots of boilerplate code, shorten
 

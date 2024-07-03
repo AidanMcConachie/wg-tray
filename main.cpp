@@ -1,10 +1,6 @@
 #include "mainwindow.h"
 
-
 #include <QApplication>
-#include <QWidget>
-#include <QMenu>
-#include <QAction>
 
 
 

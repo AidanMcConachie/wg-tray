@@ -10,7 +10,7 @@
 #include <QIcon>
 
 
-using namespace std;
+using namespace std; // should be removed to remain consistent
 
 string getDirectories(string directoryType){
     const string homeDirectory = getenv("HOME"); // could use string as well
@@ -35,7 +35,7 @@ void createFiles(){
             throw runtime_error("Directory already exists");
         }
         else{
-            // could change below to filesystem to remain consistent, will need env checks
+            // could change below to filesystem to remain consistent, will need env checks like above
             system("cd $HOME/.config && mkdir wg-tray"); // make directory
             system("cd $HOME/.config/wg-tray && mkdir wireguard-configs"); // make directory for wireguard configs
         }
