@@ -6,6 +6,7 @@
 #include <QSystemTrayIcon>
 
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class wireguard_tray;
@@ -29,7 +30,8 @@ public:
         }
     }
 private slots:
-    void on_configButton_pressed(int index);
+    void on_configButton_pressed(int index); // make buttons functional, go to source file
+    void onTrayExit(); // on tray exit (right click)
 
 private:
     Ui::wireguard_tray *ui;

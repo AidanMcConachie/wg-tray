@@ -5,6 +5,7 @@ A simple Qt-based wireguard tool to easily switch configuration files
 
 ## Required Dependendencies
 - gcc
+- resolvconf
 - make
 - sudo
 - foot
@@ -12,8 +13,8 @@ A simple Qt-based wireguard tool to easily switch configuration files
 
 ## Copying existing wireguard files
 To copy wireguard files to configurate wireguard-tray, run wg-tray, then run the following command in your preferred terminal
-`$ sudo cp /etc/wireguard $HOME/.config/wg-tray/wireguard-configs'
 
-if you do not have any existing wireguard files, put all new wireguard .conf files in the .config/wg-tray/wireguard-configs directory
+```$ sudo cp /etc/wireguard $HOME/.config/wg-tray/wireguard-configs```
 
+Currently, wg-tray only supports up to 4 configurations
 

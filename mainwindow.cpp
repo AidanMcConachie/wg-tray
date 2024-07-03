@@ -13,7 +13,8 @@
 #include <iostream>
 
 
-QString previousUsedConfig = ""; // has to be global so other functions (of classes) can access it
+
+QString previousUsedConfig = ""; // has to be global so all methods can access it
 
 wireguard_tray::wireguard_tray(QWidget *parent)
     : QMainWindow(parent)
@@ -38,8 +39,8 @@ wireguard_tray::wireguard_tray(QWidget *parent)
     QMenu *menu = new QMenu;
     QAction *exit = menu->addAction("Exit");
     tray->setContextMenu(menu);
-    connect(tray, &QSystemTrayIcon::activated, this, &wireguard_tray::onTrayClick); // open/close when clicking tray icon
-    connect(exit, &QAction::triggered, this, &QCoreApplication::quit); // exit application
+    // connect(exit, &QAction::triggered, this, std::bind(&wireguard_tray::onTrayExit, this, previousUsedConfig));; // stop wireguard
+    // connect(exit, &QAction::triggered, this, &QCoreApplication::quit); // exit application
 
     // TODO: Lots of boilerplate code, shorten
 
@@ -62,14 +63,13 @@ wireguard_tray::wireguard_tray(QWidget *parent)
         ui->config4Button->setVisible(false);
     }
 
-    std::cout << ui->config4Button->text().toStdString() << std::endl;
     // std::bind is used below to add index (less code needed)
     connect(ui->config1Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 0));
     connect(ui->config2Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 1));
     connect(ui->config3Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 2));
     connect(ui->config4Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 3));
+    connect(exit, &QAction::triggered, this, &wireguard_tray::onTrayExit); // stop wireguard
 
-    delete menu; delete exit;
 }
 
 wireguard_tray::~wireguard_tray()
@@ -77,7 +77,12 @@ wireguard_tray::~wireguard_tray()
     delete ui;
 }
 
-
+void wireguard_tray::onTrayExit(){
+    if (!(previousUsedConfig=="")){
+        stopwg(previousUsedConfig);
+    }
+    QCoreApplication::exit();
+}
 
 
 void wireguard_tray::on_configButton_pressed(int index)

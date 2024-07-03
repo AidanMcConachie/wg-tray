@@ -13,9 +13,13 @@
 
 void startwg(QString configName, QString lastConfigName=""){
     QProcess* terminal = new QProcess();
-    if (!(lastConfigName=="")){ // might be able to use nullptr here?
-        QStringList command = {"sudo", "wg-quick", "down", lastConfigName, "&&", "sudo", "wg-quick", "up", configName}; // stop and start
-        terminal->start("foot", command);
+    if (!(lastConfigName=="")){
+        QStringList downCommand = {"sudo", "wg-quick", "down", lastConfigName};
+        QStringList upCommand = {"sudo", "wg-quick", "up", configName};
+        terminal->start("foot", downCommand);
+        terminal->waitForFinished();
+        terminal->start("foot", upCommand); // have to put password twice, not optimal
+        terminal->waitForFinished();
     } else {
         QStringList command = {"sudo", "wg-quick", "up", configName}; // just start
         terminal->start("foot", command);
@@ -26,8 +30,8 @@ void stopwg(QString configName){
     QProcess* terminal = new QProcess();
     QStringList command = {"sudo", "wg-quick", "down", configName};
     terminal->start("foot", command);
+    terminal->waitForFinished();
 }
-
 
 
 #endif // WIREGUARD_FUNCTIONS_H
