@@ -63,6 +63,7 @@ wireguard_tray::wireguard_tray(QWidget *parent)
     connect(ui->config3Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 2));
     connect(ui->config4Button, &QRadioButton::clicked, this, std::bind(&wireguard_tray::on_configButton_pressed, this, 3));
     connect(exit, &QAction::triggered, this, &wireguard_tray::onTrayExit); // stop wireguard
+    connect(tray, &QSystemTrayIcon::activated, this, &wireguard_tray::onTrayClick);
 
 }
 
